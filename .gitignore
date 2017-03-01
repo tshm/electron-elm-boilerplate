@@ -5,5 +5,5 @@ dist/
 tmp/
 elm.js
 *.vim
-app.js
+dist.js
 *.log

@@ -4,8 +4,8 @@
   "description": "description",
   "main": "index.js",
   "scripts": {
-    "release": "npm run build && npm run app.js && build",
-    "app.js": "uglifyjs elm.js src/app.js -c -m --output app.js",
+    "release": "npm run build && npm run dist.js && build",
+    "dist.js": "uglifyjs elm.js src/app.js -c -m --output dist.js",
     "open": "electron devel.js",
     "start": "elm-live --debug --warn src/Main.elm --output elm.js",
     "build": "elm-make --warn src/Main.elm --output elm.js",
