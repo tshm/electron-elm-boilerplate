@@ -4,5 +4,7 @@ Boilerplate for Electron application written in Elm
 ## development
 add Elm files under src folder.
 
-`npm start` will launch `elm-live` for building and
-electron instance.
+`npm start` will launch `elm-live` for continuous building.
+`npm run open` for starting electron instance which connects
+to `elm-live` server.
+

@@ -10,9 +10,9 @@
 <body></body>
 <script src="elm.js"></script>
 <script>
-if (typeof require !== 'undefined') {
-  window.Elm = require('./elm.js');
+if (typeof module === 'object') {
+  window.Elm = module.exports
 }
-Elm.Main.fullscreen();
+Elm.Main.fullscreen()
 </script>
 </html>

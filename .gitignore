@@ -4,3 +4,4 @@ repl-temp-*
 dist/
 tmp/
 elm.js
+*.vim

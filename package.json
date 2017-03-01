@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dist": "build",
-    "open": "electron .",
-    "serve": "elm-live --debug --warn src/Main.elm --output elm.js",
-    "start": "npm run serve | npm run open",
+    "open": "electron devel.js",
+    "start": "elm-live --debug --warn src/Main.elm --output elm.js",
     "build": "elm-make --warn src/Main.elm --output elm.js",
     "test": "npm run build"
   },

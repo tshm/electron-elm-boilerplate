@@ -25,7 +25,12 @@ app.on('ready', () => {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
+  if (typeof global.url === 'undefined') {
+    mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
+  } else {
+    console.log(`loading: ${global.url}`)
+    mainWindow.loadURL(global.url)
+  }
 
   mainWindow.once('ready-to-show', () => {
     mainWindow.show()
@@ -37,6 +42,7 @@ app.on('ready', () => {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
+    process.exit(0)
   })
 })
 
