@@ -4,7 +4,8 @@
   "description": "description",
   "main": "index.js",
   "scripts": {
-    "dist": "build",
+    "release": "npm run build && npm run app.js && build",
+    "app.js": "uglifyjs elm.js src/app.js -c -m --output app.js",
     "open": "electron devel.js",
     "start": "elm-live --debug --warn src/Main.elm --output elm.js",
     "build": "elm-make --warn src/Main.elm --output elm.js",
@@ -25,17 +26,17 @@
     "url": "https://github.com/tshm/electron-elm-boilerplate/issues"
   },
   "homepage": "https://github.com/tshm/electron-elm-boilerplate#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "electron": "^1.4.15",
     "electron-builder": "^14.5.3",
+    "uglify-js": "^2.7.5",
     "elm": "^0.18.0",
     "elm-live": "^2.7.4"
   },
   "build": {
     "appId": "electron-elm-boilerplate",
-    "copyright": "Copyright 2016-2017 WHO",
+    "copyright": "Copyright 2017 WHO",
     "files": [
       "!.*",
       "!elm-stuff/**/*",

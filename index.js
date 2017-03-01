@@ -27,7 +27,7 @@ app.on('ready', () => {
   // and load the index.html of the app.
   if (typeof global.url === 'undefined') {
     mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
-  } else {
+  } else { // this is for debugging / development scenario
     console.log(`loading: ${global.url}`)
     mainWindow.loadURL(global.url)
   }
